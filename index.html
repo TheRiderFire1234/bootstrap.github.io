@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛУЧШИЙ САЙТ В МИРЕ</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Сохраняем твои точные цвета */
+        .custom-bg {
+            background-color: #58e845 !important;
+        }
+        .custom-bg-light {
+            background-color: #76ff7a !important;
+        }
+        .custom-nav-bg {
+            background: #333 !important;
+        }
+        /* Стили для логотипа */
+        .logo-circle {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        /* Стили для навигационных ссылок как в твоем CSS */
+        .nav-custom a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav-custom a:hover {
+            background: #3da52f;
+        }
+        /* Стили для мобильной навигации */
+        .mobile-nav-custom a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-bottom: 1px solid #555;
+            text-align: center;
+            transition: background 0.3s;
+            display: block;
+        }
+        .mobile-nav-custom a:hover {
+            background: #3da52f;
+        }
+        /* Стили для таблицы как в твоем CSS */
+        .custom-table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+        .custom-table th, .custom-table td {
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        .custom-table thead th {
+            background: #333;
+            color: #fff;
+        }
+        .custom-table tbody tr:nth-child(odd) {
+            background: #58e845;
+        }
+        .custom-table tbody tr:nth-child(even) {
+            background: #76ff7a;
+        }
+        /* Для мобильных - уменьшаем padding */
+        @media (max-width: 768px) {
+            .custom-table th, .custom-table td {
+                padding: 8px 10px;
+            }
+            .custom-table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER - максимально похоже на твой оригинал -->
+    <header class="custom-bg">
+        <div class="container-fluid">
+            <!-- Верхнее меню -->
+            <div class="row py-2">
+                <div class="col-12 d-flex justify-content-end">
+                    <!-- Десктопная навигация - скрыта на мобильных -->
+                    <nav class="nav-custom d-none d-lg-flex gap-2">
+                        <a href="#home">Главная</a>
+                        <a href="#about">О нас</a>
+                        <a href="#contacts">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Логотип и название -->
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <div class="d-flex align-items-center">
+                        <div class="logo-circle me-3">
+                            <img src="stone.jpg" alt="Лого" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div class="site-name text-white fw-bold fs-3">
+                            ЛУЧШИЙ САЙТ В МИРЕ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- МОБИЛЬНАЯ НАВИГАЦИЯ - под header как в твоем дизайне -->
+    <nav class="mobile-nav-custom custom-nav-bg d-lg-none">
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <!-- МОБИЛЬНАЯ ТАБЛИЦА - сразу под навигацией на мобильных -->
+    <div class="d-block d-lg-none">
+        <div class="container-fluid p-3">
+            <h2 class="mb-3">Таблица данных</h2>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Название</th>
+                            <th>Категория</th>
+                            <th colspan="2">Описание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">1</td>
+                            <td>Элемент A</td>
+                            <td>Тип 1</td>
+                            <td colspan="2">Объединённая ячейка</td>
+                        </tr>
+                        <tr>
+                            <td>Элемент B</td>
+                            <td>Тип 1</td>
+                            <td>Описание B1</td>
+                            <td>Описание B2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Элемент C</td>
+                            <td>Тип 2</td>
+                            <td colspan="2">Общее описание</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Элемент D</td>
+                            <td>Тип 2</td>
+                            <td>Описание D1</td>
+                            <td>Описание D2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td colspan="2">Элемент E (объединено)</td>
+                            <td>Описание E1</td>
+                            <td>Описание E2</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Элемент F</td>
+                            <td>Тип 3</td>
+                            <td colspan="2">Общее описание</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td colspan="2">Элемент G (объединено)</td>
+                            <td>Описание G1</td>
+                            <td>Описание G2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <div class="container my-4">
+        <!-- Все ссылки как в твоем оригинале -->
+        <div class="mb-4">
+            Абсолютная гиперссылка на главную и в протоколе https<br>
+            <a href="https://www.kubsu.ru">Official KubSU page</a><br>
+            <a href="https://www.kubsu.ru">Official KubSU page</a><br>
+            
+            ссылка изображение<br>
+            <a href="https://www.kubsu.ru">
+                <img src="image.jpg" alt="Flower" width="200" height="150">
+            </a><br>
+            
+            сокр ссылки на внутреннюю и главную страницу<br>
+            <a href="fktipm">Ссылка на ФКТиПМ (сокр)</a><br>
+            <a href="/">Ссылка на главную (сокр)</a><br>
+
+            ссылка на фрагмент текущей страницы с формой<br>
+            <a href="#fragment">Перейти к фрагменту страницы</a><br>
+
+            ссылка с тремя параметрами в URL<br>
+            <a href="https://kubsu.ru/ru/education?level=bachelor&amp;faculty=informatiki&amp;form=zaochnaya">
+                ФКТиПМ - бакалавриат, очная форма
+            </a><br>
+            
+            CCылка URL с параметром id<br>
+            <a href="https://kubsu.ru/ru/news?id=12345">
+                Новость #12345
+            </a><br>
+            
+            Относительная ссылка на страницу в текущем каталоге
+            <a href="page.html">Страница в текущем каталоге</a><br>
+            
+            Относительная ссылка на страницу в каталоге about
+            <a href="about/page_about.html">Страница в каталоге about</a><br>
+            
+            Относительная ссылка на страницу в каталоге уровнем выше текущего
+            <a href="../page1.html">Страница в родительском каталоге</a><br>
+            
+            Относительная ссылка на страницу в каталоге на два уровня выше текущего
+            <a href="../../page1.html">Страница в родительском каталоге</a>
+            
+            <p class="mt-3">
+                Текст абзаца, в котором есть 
+                <a href="https://www.kubsu.ru">контекстная ссылка</a>, 
+            </p>
+
+            Ссылка на фрагмент страницы стороннего сайта:
+            <a href="https://ru.wikipedia.org/wiki/Интернет#История"> 
+                История развития интернета
+            </a>
+
+            <br>
+            
+            <h2 class="mt-3">Ссылки из прямоугольных и круглых областей</h2>
+            <img src="image.jpg" alt="Цветок" usemap="#imageMap" width="200" height="150">
+            <map name="imageMap">
+                <area shape="circle" coords="100,75,50" href="https://www.kubsu.ru/fktipm" title="Цветок" alt="Цветок">
+                <area shape="rect" coords="0,0,200,150" href="https://www.kubsu.ru" title="Фон" alt="Фон">
+            </map>
+            <br>
+            
+            <a href="#">Ссылка с пустым href</a><br>
+            <span class="text-muted">Ссылка без href</span><br>
+            <a href="https://www.kubsu.ru" rel="nofollow">Ссылка с nofollow</a><br>
+            <a href="https://www.kubsu.ru" rel="nofollow">Ссылка без индексации</a><br>
+            
+            Нумерованный список ссылок с подписями title:
+            <ol class="mt-2">
+                <li>
+                    <a href="https://www.google.com" title="Крупнейшая в мире поисковая система и облачный провайдер">
+                        Поисковая система Google
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.wikipedia.org" title="Свободная энциклопедия, создаваемая сообществом">
+                        Википедия
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com" title="Самый популярный в мире видеохостинг">
+                        YouTube
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com" title="Крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://habr.com" title="Популярный ресурс для IT-специалистов, блоги и статьи">
+                        Habr
+                    </a>
+                </li>
+            </ol>
+            <br>
+            
+            <a href="/download.php?file_id=report123">Ссылка на файл на сервере ftp с авторизацией</a><br>
+            
+            <div id="fragment" class="mt-3"></div>
+        </div>
+
+        <!-- ДЕСКТОПНАЯ ТАБЛИЦА - в контейнере на десктопе -->
+        <div class="d-none d-lg-block mb-4">
+            <section class="p-3">
+                <h2 class="mb-3">Таблица данных</h2>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Название</th>
+                                <th>Категория</th>
+                                <th colspan="2">Описание</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">1</td>
+                                <td>Элемент A</td>
+                                <td>Тип 1</td>
+                                <td colspan="2">Объединённая ячейка</td>
+                            </tr>
+                            <tr>
+                                <td>Элемент B</td>
+                                <td>Тип 1</td>
+                                <td>Описание B1</td>
+                                <td>Описание B2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Элемент C</td>
+                                <td>Тип 2</td>
+                                <td colspan="2">Общее описание</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Элемент D</td>
+                                <td>Тип 2</td>
+                                <td>Описание D1</td>
+                                <td>Описание D2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td colspan="2">Элемент E (объединено)</td>
+                                <td>Описание E1</td>
+                                <td>Описание E2</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Элемент F</td>
+                                <td>Тип 3</td>
+                                <td colspan="2">Общее описание</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td colspan="2">Элемент G (объединено)</td>
+                                <td>Описание G1</td>
+                                <td>Описание G2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- ФОРМА -->
+        <div class="mb-4">
+            <h1>Форма</h1>
+            <form id="mainForm">
+                Текстовое поле ФИО на русском:<br>
+                <input type="text" class="form-control mb-2" style="max-width: 300px;" 
+                       oninput="this.value=this.value.replace(/[^а-яА-ЯёЁ\s]/g,'')" 
+                       placeholder="ФИО на русском">
+                
+                Телефон<br>
+                <input type="tel" class="form-control mb-2" style="max-width: 300px;"
+                       oninput="this.value=this.value.replace(/[^\d]/g,'')" 
+                       placeholder="tel">
+                
+                email<br>
+                <input type="email" class="form-control mb-2" style="max-width: 300px;" 
+                       required placeholder="Введите вашу почту">
+                
+                Дата рождения<br>
+                <input type="date" class="form-control mb-2" style="max-width: 300px;">
+                
+                Пол <br>
+                <div class="mb-2">
+                    <label class="me-3"><input type="radio" name="gender" value="male" class="me-1" required> Мужской</label>
+                    <label class="me-3"><input type="radio" name="gender" value="female" class="me-1"> Женский</label>
+                    <label><input type="radio" name="gender" value="other" class="me-1"> Другой</label>
+                </div>
+                
+                Любимый язык программирования<br>
+                <div class="mb-2">
+                    <select id="programmingLanguages" name="languages" multiple class="form-control" style="max-width: 300px; height: 150px;" required>
+                        <option value="pascal">Pascal</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="haskel">Haskel</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="prolog">Prolog</option>
+                        <option value="scala">Scala</option>
+                    </select>
+                    <small class="form-text text-muted">Для выбора нескольких языков удерживайте Ctrl (Cmd на Mac). Обязательно выберите хотя бы один язык.</small>
+                </div>
+                
+                Биография<br>
+                <textarea class="form-control mb-2" rows="10" placeholder="Опишите вашу биографию" style="max-width: 600px;"></textarea>
+                
+                <label class="d-block mb-2">
+                    <input type="checkbox" name="contract_agreed" required class="me-1">
+                    Я ознакомлен(а) с условиями контракта и согласен(на) с ними
+                </label>
+                
+                <input type="submit" value="Сохранить" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+
+    <!-- ФУТЕР -->
+    <footer class="custom-bg py-3 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-0 fw-bold">(c) Никита Антоненко</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
