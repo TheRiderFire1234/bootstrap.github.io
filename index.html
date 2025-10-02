@@ -205,7 +205,7 @@
             <a href="#fragment">Перейти к фрагменту страницы</a><br>
 
             ссылка с тремя параметрами в URL<br>
-            <a href="https://kubsu.ru/ru/education?level=bachelor&amp;faculty=informatiki&amp;form=zaochnaya">
+            <a href="https://kubsu.ru/ru/education?level=bachelor&faculty=informatiki&form=zaochnaya">
                 ФКТиПМ - бакалавриат, очная форма
             </a><br>
             
@@ -247,7 +247,7 @@
             <br>
             
             <a href="#">Ссылка с пустым href</a><br>
-            <span class="text-muted">Ссылка без href</span><br>
+            <a class="text-muted">Ссылка без href</a><br>
             <a href="https://www.kubsu.ru" rel="nofollow">Ссылка с nofollow</a><br>
             <a href="https://www.kubsu.ru" rel="nofollow">Ссылка без индексации</a><br>
             
@@ -350,68 +350,69 @@
             </section>
         </div>
 
+        <!-- ФОРМА - оставляем максимально похожей -->
         <!-- ФОРМА -->
-        <div class="mb-4">
-            <h1>Форма</h1>
-            <form id="mainForm">
-                Текстовое поле ФИО на русском:<br>
-                <input type="text" class="form-control mb-2" style="max-width: 300px;" 
-                       oninput="this.value=this.value.replace(/[^а-яА-ЯёЁ\s]/g,'')" 
-                       placeholder="ФИО на русском">
-                
-                Телефон<br>
-                <input type="tel" class="form-control mb-2" style="max-width: 300px;"
-                       oninput="this.value=this.value.replace(/[^\d]/g,'')" 
-                       placeholder="tel">
-                
-                email<br>
-                <input type="email" class="form-control mb-2" style="max-width: 300px;" 
-                       required placeholder="Введите вашу почту">
-                
-                Дата рождения<br>
-                <input type="date" class="form-control mb-2" style="max-width: 300px;">
-                
-                Пол <br>
-                <div class="mb-2">
-                    <label class="me-3"><input type="radio" name="gender" value="male" class="me-1" required> Мужской</label>
-                    <label class="me-3"><input type="radio" name="gender" value="female" class="me-1"> Женский</label>
-                    <label><input type="radio" name="gender" value="other" class="me-1"> Другой</label>
-                </div>
-                
-                Любимый язык программирования<br>
-                <div class="mb-2">
-                    <select id="programmingLanguages" name="languages" multiple class="form-control" style="max-width: 300px; height: 150px;" required>
-                        <option value="pascal">Pascal</option>
-                        <option value="c">C</option>
-                        <option value="cpp">C++</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="php">PHP</option>
-                        <option value="python">Python</option>
-                        <option value="java">Java</option>
-                        <option value="haskel">Haskel</option>
-                        <option value="clojure">Clojure</option>
-                        <option value="prolog">Prolog</option>
-                        <option value="scala">Scala</option>
-                    </select>
-                    <small class="form-text text-muted">Для выбора нескольких языков удерживайте Ctrl (Cmd на Mac). Обязательно выберите хотя бы один язык.</small>
-                </div>
-                
-                Биография<br>
-                <textarea class="form-control mb-2" rows="10" placeholder="Опишите вашу биографию" style="max-width: 600px;"></textarea>
-                
-                <label class="d-block mb-2">
-                    <input type="checkbox" name="contract_agreed" required class="me-1">
-                    Я ознакомлен(а) с условиями контракта и согласен(на) с ними
-                </label>
-                
-                <input type="submit" value="Сохранить" class="btn btn-primary">
-            </form>
+<div class="mb-4">
+    <h1>Форма</h1>
+    <form id="mainForm">
+        Текстовое поле ФИО на русском:<br>
+        <input type="text" class="form-control mb-2" style="max-width: 300px;" 
+               oninput="this.value=this.value.replace(/[^а-яА-ЯёЁ\s]/g,'')" 
+               placeholder="ФИО на русском">
+        
+        Телефон<br>
+        <input type="tel" class="form-control mb-2" style="max-width: 300px;"
+               oninput="this.value=this.value.replace(/[^\d]/g,'')" 
+               placeholder="tel">
+        
+        email<br>
+        <input type="email" class="form-control mb-2" style="max-width: 300px;" 
+               required placeholder="Введите вашу почту">
+        
+        Дата рождения<br>
+        <input type="date" class="form-control mb-2" style="max-width: 300px;">
+        
+        Пол <br>
+        <div class="mb-2">
+            <label class="me-3"><input type="radio" name="gender" value="male" class="me-1" required> Мужской</label>
+            <label class="me-3"><input type="radio" name="gender" value="female" class="me-1"> Женский</label>
+            <label><input type="radio" name="gender" value="other" class="me-1"> Другой</label>
         </div>
-    </div>
+        
+        Любимый язык программирования<br>
+        <div class="mb-2">
+            <select id="programmingLanguages" name="languages" multiple class="form-control" style="max-width: 300px; height: 150px;" required>
+                <option value="pascal">Pascal</option>
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="haskel">Haskel</option>
+                <option value="clojure">Clojure</option>
+                <option value="prolog">Prolog</option>
+                <option value="scala">Scala</option>
+            </select>
+            <small class="form-text text-muted">Для выбора нескольких языков удерживайте Ctrl (Cmd на Mac). Обязательно выберите хотя бы один язык.</small>
+        </div>
+        
+        Биография<br>
+        <textarea class="form-control mb-2" rows="10" cols="50" placeholder="Опишите вашу биографию" style="max-width: 600px;">
+        </textarea>
+        
+        <label class="d-block mb-2">
+            <input type="checkbox" name="contract_agreed" required class="me-1">
+            Я ознакомлен(а) с условиями контракта и согласен(на) с ними
+        </label>
+        
+        <input type="submit" value="Сохранить" class="btn btn-primary">
+    </form>
+  </div>
 
     <!-- ФУТЕР -->
-    <footer class="custom-bg py-3 mt-4">
-        <div class="container">
+    <footer class="custom-bg py-3">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <p class="mb-0 fw-bold">(c) Никита Антоненко</p>
@@ -419,5 +420,5 @@
             </div>
         </div>
     </footer>
-</body>
+  </body>
 </html>
