@@ -309,9 +309,30 @@ CCылка URL с параметром id<br>
     </label><br>
     <input type="submit" value="Сохранить">
 </form>
-
 </div>
 
+<div class="calc">
+<h3>Калькулятор заказа</h3>
+<input type="number" id="quantity" value="1" min="1">
+<select id="product">
+<option value="1000">Товар 1 - 1000 ₽</option>
+<option value="2000">Товар 2 - 2000 ₽</option>
+<option value="3000">Товар 3 - 3000 ₽</option>
+</select>
+<button onclick="calculate()">Рассчитать</button>
+<div id="result" class="result"></div>
+</div>
+
+<script>
+function calculate(){
+const q=document.getElementById('quantity').value;
+const p=document.getElementById('product').value;
+const t=q*p;
+document.getElementById('result').innerHTML=`Стоимость: ${t.toLocaleString()} ₽`;
+document.getElementById('result').style.display='block';
+}
+</script>
+    
 <footer>
   <div class="col-12">
     <p>(c) Никита Антоненко</p>
