@@ -312,16 +312,40 @@ CCылка URL с параметром id<br>
 </div>
 
 <div class="calc">
-        <h3>Калькулятор заказа</h3>
-        <div id="result" class="result"></div>
-        <input type="text" id="quantity" value="1">
-        <select id="product">
-            <option value="1000">Товар 1 - 1000 ₽</option>
-            <option value="2000">Товар 2 - 2000 ₽</option>
-            <option value="3000">Товар 3 - 3000 ₽</option>
-        </select>
-        <button id="calcBtn">Рассчитать</button>
+    <h3>Калькулятор заказа</h3>
+    <div id="result" class="result"></div>
+    
+    <input type="text" id="quantity" value="1">
+    
+    <select id="product">
+        <option value="1000">Товар 1 - 1000 ₽</option>
+        <option value="2000">Товар 2 - 2000 ₽</option>
+        <option value="3000">Товар 3 - 3000 ₽</option>
+    </select>
+
+    <div id="extraOptions" style="display: none; margin-top: 10px;">
+        <label><input type="radio" name="extra" value="0" checked> Без доп. услуг</label><br>
+        <label><input type="radio" name="extra" value="500"> Услуга A (+500 ₽)</label><br>
+        <label><input type="radio" name="extra" value="800"> Услуга B (+800 ₽)</label>
     </div>
+
+    <div id="extraCheckbox" style="display: none; margin-top: 10px;">
+        <label>
+            <input type="checkbox" class="extra-checkbox" data-price="500">
+            Свойство 1 (+500 ₽)
+        </label><br>
+        <label>
+            <input type="checkbox" class="extra-checkbox" data-price="200">
+            Свойство 2 (+200 ₽)
+        </label><br>
+        <label>
+            <input type="checkbox" class="extra-checkbox" data-price="700">
+            Свойство 3 (+700 ₽)
+        </label>
+    </div>
+
+    <button id="calcBtn">Рассчитать</button>
+</div>
 
     <script src="calculator.js"></script>
     
