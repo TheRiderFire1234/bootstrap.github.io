@@ -173,9 +173,74 @@ footer p {
     white-space: normal;
   }
 
-
-/* ===== БОЛЬШИЕ ЭКРАНЫ ===== */
-
   .container {
     max-width: 1400px;
   }
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  justify-content: center;
+}
+
+.arrow {
+  font-size: 32px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.gallery {
+  width: 600px; /* помещаем 3 картинки по 200px */
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.images img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 6px;
+  margin: auto;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.image-wrapper {
+  flex: 0 0 200px;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* На смартфонах показываем по одной картинке */
+@media (max-width: 600px) {
+  .gallery {
+    width: 200px;
+  }
+}
