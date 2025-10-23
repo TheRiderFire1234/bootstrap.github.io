@@ -7,16 +7,30 @@ document.addEventListener("DOMContentLoaded", function() {
 function initCalculator() {
     var quantityInput = document.getElementById("quantity");
     var productSelect = document.getElementById("product");
-    var calcButton = document.getElementById("calcBtn");
     var extraOptionsDiv = document.getElementById("extraOptions");
     var extraCheckboxDiv = document.getElementById("extraCheckbox");
 
-    calcButton.addEventListener("click", handleCalculate);
+    // Добавляем обработчики событий для всех элементов, которые влияют на расчет
     quantityInput.addEventListener("input", handleInputValidation);
+    quantityInput.addEventListener("input", handleCalculate);
+    
     productSelect.addEventListener("change", handleProductChange);
+    productSelect.addEventListener("change", handleCalculate);
+    
+    // Обработчики для радиокнопок
+    var radioButtons = document.querySelectorAll('input[name="extra"]');
+    radioButtons.forEach(function(radio) {
+        radio.addEventListener("change", handleCalculate);
+    });
+    
+    // Обработчики для чекбоксов
+    var checkboxes = document.querySelectorAll('.extra-checkbox');
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener("change", handleCalculate);
+    });
 
     updateExtraVisibility(productSelect.value);
-    handleCalculate();
+    handleCalculate(); // Первоначальный расчет
 }
 
 function handleCalculate() {
@@ -68,7 +82,6 @@ function handleInputValidation(event) {
 function handleProductChange() {
     var productSelect = document.getElementById("product");
     updateExtraVisibility(productSelect.value);
-    handleCalculate();
 }
 
 function updateExtraVisibility(productId) {
